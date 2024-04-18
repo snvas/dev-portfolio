@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 		assets: "/<rootDir>/assets",
 	},
 
-	css: ["~/assets/css/main.scss"],
+	css: ["~/assets/css/main.css"],
 
 	postcss: {
 		plugins: {
