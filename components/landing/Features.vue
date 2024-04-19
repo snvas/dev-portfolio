@@ -76,7 +76,7 @@ const features = [
 <template>
   <div class="mt-16 md:mt-0" id="projects">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-		Portfólio de projetos de desenvolvimento web com Vue    </h2>
+		Portfólio de projetos de desenvolvimento web com Vue.js    </h2>
     <p class="text-lg mt-4 text-slate-600">
 		Esses projetos ilustram meu domínio em várias tecnologias essenciais da web, incluindo HTML, CSS, JavaScript, e o uso de APIs. Você encontrará desde aplicativos simples, como geradores de citações e listas de tarefas, até funcionalidades mais complexas, como validação de formulários e integração com APIs externas como a do GitHub e da Wikipedia.
     </p class="text-lg mt-4 text-slate-600">

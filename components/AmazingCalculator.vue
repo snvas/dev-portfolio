@@ -1,36 +1,39 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue";
+import { Parser } from "expr-eval";
 
-const display = ref('0')
+const display = ref("0");
 
 const appendToDisplay = (value) => {
-  if (display.value === '0' && value !== '.') {
-    display.value = value
+  if (display.value === "0" && value !== ".") {
+    display.value = value;
   } else {
-    display.value += value
+    display.value += value;
   }
-}
+};
 
 const calculate = () => {
   try {
-    display.value = eval(display.value).toString()
+    const parser = new Parser();
+    const result = parser.parse(display.value).evaluate();
+    display.value = result.toString();
   } catch (error) {
-    display.value = 'Error'
+    display.value = "Error";
   }
-}
+};
 
 const displayClass = computed(() => {
-  return display.value.length > 12 ? 'small-text' : ''
-})
+  return display.value.length > 12 ? "small-text" : "";
+});
 
 const clearDisplay = () => {
-  display.value = '0'
-}
+  display.value = "0";
+};
 </script>
 
 <template>
   <div>
-	<h1 class="text-center text-3xl p-10">Calculator</h1>
+    <h1 class="text-center text-3xl p-10">Calculator</h1>
 
     <div class="calculator">
       <input v-model="display" :class="displayClass" readonly />

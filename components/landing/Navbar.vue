@@ -4,26 +4,37 @@ const menuitems = [
 {
     title: "Vue Projects",
     path: "/#projects",
+	target: ""
+  },
+  {
+    title: "My Trips",
+    path: "https://my-trips.soraianovaes.com.br/",
+	target: "_blank"
   },
   {
     title: "Criador de Aulas",
     path: "https://criadordeaulas.com.br",
+	target: "_blank"
   },
   {
     title: "AB Tester",
     path: "https://abtester.com.br",
+	target: "_blank"
   },
   {
     title: "Propaganda em Revista",
     path: "https://propagandasemrevistas.com.br",
+	target: "_blank"
   },
   {
     title: "Desafio do Código",
     path: "https://desafiodocodigo.com.br",
+	target: "_blank"
   },
   {
     title: "Contato",
     path: "/#contato",
+	target: ""
   },
 ];
 
@@ -71,7 +82,10 @@ const open = ref(false);
             <a
               :href="item.path"
               class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
+			  :target="item.target"
+			  rel="noreferrer"
             >
+			
               {{ item.title }}
             </a>
           </li>

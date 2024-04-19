@@ -101,6 +101,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  min-height: 600px ;
 }
 
 h1 {
@@ -137,6 +138,7 @@ button[type='submit'] {
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 button[type='submit']:hover {
