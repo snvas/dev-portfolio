@@ -5,7 +5,7 @@
     >
       Websites
     </h2>
-    <div class="grid grid-cols-3 auto-cols-max gap-10">
+    <div class="grid lg:grid-cols-3 grid-cols-1 auto-cols-max gap-10">
      
         <div v-for="website in websites" :key="website.name" class="rounded shadow-lg">
 			<a :href="website.link">
