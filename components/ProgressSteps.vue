@@ -45,7 +45,7 @@ const prevStep = () => {
 
 .progress-bar {
   display: flex;
-  background-color: #eee;
+  background-color: #666;
   border-radius: 8px;
   overflow: hidden;
 }

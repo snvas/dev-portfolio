@@ -1,5 +1,7 @@
 <template>
-	<LandingNavbar></LandingNavbar>
-	<slot></slot>
-	<LandingFooter></LandingFooter>
-  </template>
+  <LandingNavbar></LandingNavbar>
+  
+    <slot></slot>
+ 
+  <LandingFooter></LandingFooter>
+</template>

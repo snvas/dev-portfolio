@@ -25,8 +25,8 @@ const submitForm = () => {
 </script>
 
 <template>
-  <div>
-	<h1 class="text-center text-3xl p-10"> Form Validation</h1>
+  <div class="pb-10">
+	<h1 class="text-center text-3xl p-4"> Form Validation</h1>
 
     <form @submit.prevent="submitForm" class="custom-form">
      

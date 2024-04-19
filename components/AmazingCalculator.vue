@@ -32,8 +32,8 @@ const clearDisplay = () => {
 </script>
 
 <template>
-  <div>
-    <h1 class="text-center text-3xl p-10">Calculator</h1>
+  <div class="pb-10">
+    <h1 class="text-center text-3xl pb-4">Calculator</h1>
 
     <div class="calculator">
       <input v-model="display" :class="displayClass" readonly />
@@ -94,6 +94,7 @@ button {
   width: 100%;
   padding: 10px;
   font-size: 18px;
+  background-color: #fff;;
 }
 
 .clear-button {

@@ -26,7 +26,7 @@ const generatePassword = () => {
 </script>
 
 <template>
-  <div class="password-generator-container">
+  <div class="password-generator-container p-6 bg-slate-50">
     <h2 class="password-generator-title">Password Generator</h2>
     <label for="lenght">Password Lenght:</label>
     <input type="number" id="lenght" v-model="passwordLength" min="4" max="32" />
