@@ -1,13 +1,13 @@
 <template>
   <div class="py-24 sm:py-32">
     <h2
-      class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center"
+      class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center pb-10"
     >
       Websites
     </h2>
-    <div class="grid grid-cols-3 auto-cols-max gap-10 justify-center items-center center">
+    <div class="grid grid-cols-3 auto-cols-max gap-10">
      
-        <div v-for="website in websites" :key="website.name" class="rounded shadow-lg pt-10">
+        <div v-for="website in websites" :key="website.name" class="rounded shadow-lg">
 			<a :href="website.link">
           <img class="w-full" :src="website.imageUrl" :alt="website.name" /></a>
           <div class="px-6 py-4">
