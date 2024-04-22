@@ -1,12 +1,6 @@
 <script setup>
 const features = [
-{
-    title: "Instagram Clone",
-    description:
-      "Um aplicativo com simulando um clone do Instagram com recursos de autenticação, criação de postagens, comentários e likes. Backend php com Laravel.",
-    icon: "bxl:instagram",
-	path: "https://github.com/snvas/instagram-clone"
-  },
+
 	{
     title: "To-Do-List",
     description:
@@ -76,6 +70,13 @@ const features = [
       "Uma aplicação que permite aos usuários pesquisar artigos na Wikipedia e exibir resultados com links diretos para os artigos. Utiliza a API da Wikipedia para buscar e exibir dados.",
     icon: "bx:bxs-window-alt",
 	path: "/wiki"
+  },
+  {
+    title: "Instagram Clone",
+    description:
+      "Um aplicativo com simulando um clone do Instagram com recursos de autenticação, criação de postagens, comentários e likes. Backend php com Laravel.",
+    icon: "bxl:instagram",
+	path: "https://github.com/snvas/instagram-clone"
   },
 ];
 </script>
