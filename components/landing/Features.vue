@@ -1,6 +1,13 @@
 <script setup>
 const features = [
-  {
+{
+    title: "Instagram Clone",
+    description:
+      "Um aplicativo com simulando um clone do Instagram com recursos de autenticação, criação de postagens, comentários e likes. Backend php com Laravel.",
+    icon: "bxl:instagram",
+	path: "https://github.com/snvas/instagram-clone"
+  },
+	{
     title: "To-Do-List",
     description:
       "Um aplicativo para gerenciar tarefas diárias. Os usuários podem adicionar, remover e listar tarefas usando uma interface simples. As tarefas são adicionadas através de um campo de entrada e podem ser excluídas individualmente.",
