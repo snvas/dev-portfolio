@@ -87,13 +87,20 @@ const websites = ref([
     imageUrl: "https://empreendelab.com.br/soraianovaes.png",
 	link: "https://soraianovaes.com.br"
   },
-  /*
+  
 {
     name: "Tecnologias para Educação",
     stack: "Google Sites",
     imageUrl: "https://empreendelab.com.br/ebook.png",
 	link: "https://sites.google.com/view/edtecnova/"
   },
-  */
+    
+{
+    name: "Mulheres de Favela",
+    stack: "Wordpress",
+    imageUrl: "https://empreendelab.com.br/mulheres-favela.png",
+	link: "https://mulheresdefavela.com.br/"
+  },
+  
 ]);
 </script>
