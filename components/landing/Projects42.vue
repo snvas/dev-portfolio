@@ -11,7 +11,7 @@ const features = [
   {
     title: "Get Next Line",
     description:
-      "Seja um arquivo, stdin ou até mesmo uma conexão de rede, você sempre precisará de uma forma de ler o conteúdo linha por linha. Este projeto trata de programar uma função que retorna uma linha lido de um descritor de arquivo.",
+      "Este projeto trata de programar uma função que retorna uma linha lido de um descritor de arquivo. Seja um arquivo, stdin ou até mesmo uma conexão de rede, você sempre precisará de uma forma de ler o conteúdo linha por linha.",
     icon: "https://game.42sp.org.br/static/assets/achievements/get_next_linem.png",
 	path: "https://github.com/snvas/42course_get_next_line"
   },
@@ -126,7 +126,7 @@ const features = [
 
   <div class="grid grid-cols-1 md:grid-cols-2 mt-16 gap-16">
     <div v-for="item of features" class="flex gap-4 items-start">
-		<a :href="item.path" class="hover:scale-125 transition-all">
+		<a :href="item.path" class="hover:scale-125 transition-all" target="_blank">
       <div class="mt p-2 w-36 h-36 shrink-0">
         <img :src="item.icon"/>
 	</div>

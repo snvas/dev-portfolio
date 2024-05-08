@@ -8,7 +8,7 @@
     <div class="grid lg:grid-cols-3 grid-cols-1 auto-cols-max gap-10">
      
         <div v-for="website in websites" :key="website.name" class="rounded shadow-lg dark:bg-slate-200">
-			<a :href="website.link">
+			<a :href="website.link" target="_blank">
           <img class="w-full" :src="website.imageUrl" :alt="website.name" /></a>
           <div class="px-6 py-4">
             <h3
