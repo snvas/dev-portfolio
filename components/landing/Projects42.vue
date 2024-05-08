@@ -127,7 +127,7 @@ const features = [
   <div class="grid grid-cols-1 md:grid-cols-2 mt-16 gap-16">
     <div v-for="item of features" class="flex gap-4 items-start">
 		<a :href="item.path" class="hover:scale-125 transition-all" target="_blank">
-      <div class="mt p-2 w-36 h-36 shrink-0">
+      <div class="md:p-2 w-20 h-20 md:w-36 md:h-36 shrink-0">
         <img :src="item.icon"/>
 	</div>
 </a>
@@ -140,7 +140,7 @@ const features = [
       </div>
     </div>
   </div>
-  <UCard class="w-3/4 mx-auto mt-20 dark:bg-transparent">
+  <UCard class="md:w-3/4 w-full mx-auto mt-20 dark:bg-transparent">
 	<template #header>
 		<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
 		Habilidades adquiridas na 42</h2>

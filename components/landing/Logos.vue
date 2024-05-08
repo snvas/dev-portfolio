@@ -68,7 +68,7 @@ const logos = [
 </script>
 
 <template>
-  <div class="mt-24 w-5/6 mx-auto">
+  <div class="mt-24 md:w-5/6 mx-auto">
     <h2 class="text-center text-slate-500">
       Experiência em desenvolvimento com as seguintes tecnologias
     </h2>
