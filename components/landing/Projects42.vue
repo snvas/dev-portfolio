@@ -140,7 +140,7 @@ const features = [
       </div>
     </div>
   </div>
-  <UCard class="w-3/4 mx-auto mt-20">
+  <UCard class="w-3/4 mx-auto mt-20 dark:bg-transparent">
 	<template #header>
 		<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
 		Habilidades adquiridas na 42</h2>
