@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.item-title{
+	@apply text-gray-500 hover:text-gray-900 hover:text-xl transition-all
+}
