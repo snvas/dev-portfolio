@@ -108,7 +108,7 @@ const features = [
   },
   {
     title: "Ft_Transcendence",
-    description: "ft_transcendence é um projeto de equipe que exige a construção de uma plataforma online para jogar Pong. O backend deve ser construído em NestJS, o frontend em qualquer framework TypeScript de sua preferência e o banco de dados deve ser PostgreSQL. Para o frontend a opção escolhida foi o Svelte, devido ao seu desempenho e extensa documentação. No geral, a plataforma deve contar com sistema de classificação, canais de chat, mensagens privadas, edição de perfil, visualização do status dos usuários e adição de outros membros como amigos. O objetivo principal é jogar uma implementação do Pong, como se fosse 1972. tudo de novo. Deveria haver algumas opções de personalização, como mapas personalizados ou power-ups, mas o usuário ainda deveria ser capaz de jogar a versão original. Finalmente, a estrutura do servidor deve ser conteinerizada usando docker e disponível com uma única chamada de: docker-compose up --build.", 
+    description: "ft_transcendence é um projeto de equipe que exige a construção de uma plataforma online para jogar Pong. O backend deve ser construído em NestJS, o frontend em qualquer framework TypeScript de sua preferência e o banco de dados deve ser PostgreSQL. Para o frontend a opção escolhida foi o Svelte, devido ao seu desempenho e extensa documentação. No geral, a plataforma deve contar com sistema de classificação, canais de chat, mensagens privadas, edição de perfil, visualização do status dos usuários e adição de outros membros como amigos. O objetivo principal é jogar uma implementação do Pong, como se fosse 1972. Deveria haver algumas opções de personalização, como mapas personalizados ou power-ups, mas o usuário ainda deveria ser capaz de jogar a versão original. Finalmente, a estrutura do servidor deve ser conteinerizada usando docker e disponível com uma única chamada de: docker-compose up --build.", 
     icon: "https://game.42sp.org.br/static/assets/achievements/ft_transcendencee.png",
 	path: "https://github.com/snvas/42course_fttranscendence"
   },
@@ -119,9 +119,9 @@ const features = [
   <div class="mt-16 md:mt-0" id="projects">
 	<h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
 		Projetos desenvolvidos na 42 São Paulo</h2>
-    <p class="text-lg mt-4 text-slate-600">
-		
-    </p class="text-lg mt-4 text-slate-600">
+    <p class="text-lg mt-4">
+		Em minha formação pela École 42, desenvolvi um conjunto diversificado de projetos que atravessaram as fronteiras tradicionais da ciência da computação, enfrentando desde a reconstrução de funções de bibliotecas padrão até o desenvolvimento de aplicações complexas e sistemas integrados. Cada projeto foi cuidadosamente projetado para não apenas reforçar competências técnicas em linguagens como C e C++, mas também para instigar a resolução de problemas complexos, otimização de processos e a integração de múltiplas tecnologias. Esta experiência prática proporcionou uma compreensão profunda das exigências e nuances da programação de alto nível e do desenvolvimento de sistemas, preparando-me para enfrentar desafios tecnológicos complexos com soluções inovadoras e eficazes.
+    </p class="text-lg mt-4">
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 mt-16 gap-16">
@@ -134,10 +134,55 @@ const features = [
       <div>
        
 		<h3 class="font-semibold text-lg"> <a :href="item.path" class="item-title">{{ item.title }}</a></h3>
-        <p class="text-slate-500 mt-2 leading-relaxed">
+        <p class="mt-2 leading-relaxed">
           {{ item.description }}
         </p>
       </div>
     </div>
   </div>
+  <UCard class="w-3/4 mx-auto mt-20">
+	<template #header>
+		<h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight">
+		Habilidades adquiridas na 42</h2>
+    </template>
+  <div class="container flex flex-col gap-2">
+		<p class="text-xl font-bold">Fundamentos de Programação:</p>
+		<ul class="item-ul">
+			<li>Aprofundamento no entendimento das linguagens C e C++.</li>
+			<li>Recodificação de funções da biblioteca padrão e criação de funções utilitárias (Libft).</li>
+		</ul>
+		<p class="text-xl font-bold">Técnicas Avançadas de Programação:</p>
+		<ul class="item-ul">
+			<li>Desenvolvimento de algoritmos complexos para classificação otimizada de dados (Push Swap).</li>
+			<li>Manipulação de múltiplas estruturas de dados e eficiência algorítmica.</li>
+		</ul>
+		<p class="text-xl font-bold"> Engenharia de Software:</p>
+		<ul class="item-ul">
+			<li>Construção de aplicações completas, como servidores HTTP e plataformas de jogos.</li>
+			<li>Implementação de metodologias de software, como I/O Multiplexing (Webserv).</li>
+		</ul>
+		<p class="text-xl font-bold">Desenvolvimento Web e Aplicações em Rede:</p>
+		<ul class="item-ul">
+			<li>Programação de interfaces e aplicações web utilizando HTML, CSS, JavaScript, e frameworks modernos como Svelte (ft_transcendence).</li>
+			<li>Configuração e gerenciamento de redes, entendimento profundo de TCP/IP (NetPractice).</li>
+		</ul>
+		<p class="text-xl font-bold">Gerenciamento de Sistemas e Infraestrutura:</p>
+		<ul class="item-ul">
+			<li>Criação e gestão de máquinas virtuais, servidores SSH, e regras de firewall (Born2beroot).</li>
+			<li>Utilização de Docker para construção de infraestruturas de serviços e orquestração com Docker Compose (Inception).</li>
+		</ul>
+		<p class="text-xl font-bold">Desenvolvimento de Jogos e Gráficos Computacionais:</p>
+		<ul class="item-ul">
+			<li>Desenvolvimento de jogos 2D e entendimento de gráficos computacionais usando bibliotecas como MiniLibX (So_long, Cub3D).</li>
+		</ul>
+		<p class="text-xl font-bold">Multithreading e Concorrência:</p>
+		<ul class="item-ul">
+			<li>Gestão de múltiplos threads e processos, utilizando mutexes para resolver problemas de concorrência e sincronização, como o problema do Jantar dos Filósofos (Philosopher).</li>
+		</ul>
+		<p class="text-xl font-bold">Design de Software e Arquitetura de Sistemas:</p>
+		<ul class="item-ul">
+			<li>Implementação de arquiteturas de software robustas e design de sistemas complexos, como a criação de uma versão própria da função printf e a reimplementação de contêineres STL em C++.</li>
+		</ul>
+  </div>
+  </UCard>
 </template>

@@ -16,7 +16,7 @@
       <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight">
         Soraia Novaes
       </h1>
-      <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      <p class="text-lg mt-4 max-w-xl">
         Engenheira de Software pela 42 São Paulo.  
 		<wbr /> +10 anos de experiência gerenciando e desenvolvendo projetos de aplicações web com conhecimentos
         HTML 5, CSS 3, JavaScript,Tailwind, GIT, Docker e WordPress.

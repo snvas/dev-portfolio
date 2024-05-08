@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from "path";
 export default defineNuxtConfig({
 	app:{
 		head: {
@@ -11,6 +10,9 @@ export default defineNuxtConfig({
 	alias: {
 		assets: "/<rootDir>/assets",
 	},
+	colorMode: {
+		preference: 'light'
+	  },
 
 	css: ["~/assets/css/main.css"],
 
@@ -21,5 +23,5 @@ export default defineNuxtConfig({
 		},
 	},
 
-	modules: ["@nuxt/content", "nuxt-icon"],
+	modules: ["@nuxt/content", "nuxt-icon", "@nuxt/ui", "@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
 });

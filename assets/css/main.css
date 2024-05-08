@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .item-title{
-	@apply text-gray-500 hover:text-gray-900 hover:text-xl transition-all
+	@apply hover:text-xl transition-all;
+}
+
+.item-ul{
+	@apply list-disc list-inside text-lg;
 }

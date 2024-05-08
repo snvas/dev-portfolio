@@ -39,6 +39,19 @@ const menuitems = [
 ];
 
 const open = ref(false);
+
+
+const colorMode = useColorMode()
+const isDark = computed({
+  get () {
+    return colorMode.value === 'dark'
+  },
+  set () {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  }
+})
+
+
 </script>
 
 <template>
@@ -46,11 +59,11 @@ const open = ref(false);
     <header class="flex flex-col lg:flex-row justify-between items-center my-5">
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Soraia</span
-          ><span class="text-slate-500">Novaes</span>
+          ><span class="font-bold">Soraia</span
+          ><span class="">Novaes</span>
         </a>
         <div class="block lg:hidden">
-          <button @click="open = !open" class="text-gray-800">
+          <button @click="open = !open" class="">
             <svg
               fill="currentColor"
               class="w-4 h-4"
@@ -81,7 +94,7 @@ const open = ref(false);
           <li v-for="item of menuitems">
             <a
               :href="item.path"
-              class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
+              class="flex lg:px-3 py-2"
 			  :target="item.target"
 			  rel="noreferrer"
             >
@@ -92,7 +105,18 @@ const open = ref(false);
         </ul>
        
       </nav>
-      
+	  <ClientOnly>
+    <UButton
+      :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
+      color="gray"
+      variant="ghost"
+      aria-label="Theme"
+      @click="isDark = !isDark"
+    />
+    <template #fallback>
+      <div class="w-8 h-8" />
+    </template>
+  </ClientOnly>
     </header>
   </LandingContainer>
 </template>

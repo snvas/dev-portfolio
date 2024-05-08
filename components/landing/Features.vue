@@ -85,9 +85,9 @@ const projects = [
   <div class="mt-16 md:mt-0" id="projects">
 	<h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
 		Portfólio de projetos de desenvolvimento web com Vue.js    </h2>
-    <p class="text-lg mt-4 text-slate-600">
+    <p class="text-lg mt-4">
 		Esses projetos ilustram meu domínio em várias tecnologias essenciais da web, incluindo HTML, CSS, JavaScript, e o uso de APIs. Você encontrará desde aplicativos simples, como geradores de citações e listas de tarefas, até funcionalidades mais complexas, como validação de formulários e integração com APIs externas como a do GitHub e da Wikipedia.
-    </p class="text-lg mt-4 text-slate-600">
+    </p class="text-lg mt-4">
   </div>
 
   <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
@@ -101,7 +101,7 @@ const projects = [
       <div>
        
 		<h3 class="font-semibold text-lg"> <a :href="item.path" class="item-title">{{ item.title }}</a></h3>
-        <p class="text-slate-500 mt-2 leading-relaxed">
+        <p class=" mt-2 leading-relaxed">
           {{ item.description }}
         </p>
       </div>

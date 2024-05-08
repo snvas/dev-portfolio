@@ -1,18 +1,18 @@
 <template>
   <div class="py-24 sm:py-32">
     <h2
-      class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center pb-10"
+      class="text-3xl font-bold tracking-tight sm:text-4xl text-center pb-10"
     >
       Websites
     </h2>
     <div class="grid lg:grid-cols-3 grid-cols-1 auto-cols-max gap-10">
      
-        <div v-for="website in websites" :key="website.name" class="rounded shadow-lg">
+        <div v-for="website in websites" :key="website.name" class="rounded shadow-lg dark:bg-slate-200">
 			<a :href="website.link">
           <img class="w-full" :src="website.imageUrl" :alt="website.name" /></a>
           <div class="px-6 py-4">
             <h3
-              class="text-base font-semibold leading-7 tracking-tight text-gray-900"
+              class="text-base font-semibold leading-7 tracking-tight dark:text-gray-800"
             >
               {{ website.name }}
             </h3>
