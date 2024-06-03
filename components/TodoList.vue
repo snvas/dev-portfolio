@@ -1,27 +1,63 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, watch } from "vue";
 
-const newTask = ref('')
+const newTask = ref("");
+const tasks = ref([]);
 
-const tasks = ref([])
+// Load tasks of localStorage
+const loadTasks = () => {
+  const storedTasks = localStorage.getItem("tasks");
+  if (storedTasks) {
+    tasks.value = JSON.parse(storedTasks);
+  }
+};
+
+//Save tasks on localStorage
+const saveTasks = () => {
+  localStorage.setItem("tasks", JSON.stringify(tasks.value));
+};
 
 const addTask = () => {
-  if (newTask.value.trim() !== '') {
-    tasks.value.push(newTask.value)
-    newTask.value = ''
+  if (newTask.value.trim() !== "") {
+    tasks.value.push(newTask.value);
+    newTask.value = "";
+    saveTasks(); // save tasks after add
   }
-}
+};
 
 const removeTask = (index) => {
-  tasks.value.splice(index, 1)
-}
+  tasks.value.splice(index, 1);
+  saveTasks(); // save tasks after remove
+};
+
+//load tasks on localStorage when mounted
+onMounted(() => {
+  loadTasks();
+});
+
+//Observe changes on tasks list and save
+/**Adds a watcher to observe changes to the task list and
+ * automatically save to localStorage whenever there is a change.
+ * The { deep: true } parameter ensures that changes
+ * within the array are observed. */
+watch(
+  tasks,
+  (newTasks) => {
+    saveTasks();
+  },
+  { deep: true }
+);
 </script>
 
 <template>
-	<h1 class="text-center text-3xl">To-Do List</h1>
+  <h1 class="text-center text-3xl">To-Do List</h1>
   <div class="todo-app">
     <div class="task-input">
-      <input v-model="newTask" @keyup.enter="addTask" placeholder="Add new Task" />
+      <input
+        v-model="newTask"
+        @keyup.enter="addTask"
+        placeholder="Add new Task"
+      />
       <button @click="addTask">Add To Do</button>
     </div>
     <ul class="task-list">
