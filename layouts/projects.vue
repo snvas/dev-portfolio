@@ -1,9 +1,6 @@
 <template>
-	<LandingNavbar></LandingNavbar>
-	<div class="bg-slate-100">
-	  <slot></slot>
-	  
-	</div>
-	<LandingFooter></LandingFooter>
-  </template>
-  
+  <LandingNavbar></LandingNavbar>
+
+  <slot></slot>
+  <LandingFooter></LandingFooter>
+</template>
