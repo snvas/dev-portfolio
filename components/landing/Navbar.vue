@@ -1,57 +1,43 @@
-
 <script setup>
 const menuitems = [
-{
-    title: "Vue Projects",
-    path: "/#projects",
-	target: ""
+  {
+    title: "Next Porfolio",
+    path: "https://next.soraianovaes.com.br/",
+    target: "_blank",
   },
   {
-    title: "My Trips",
-    path: "https://my-trips.soraianovaes.com.br/",
-	target: "_blank"
+    title: "Vue Projects",
+    path: "/#projects",
+    target: "",
   },
   {
     title: "Criador de Aulas",
     path: "https://criadordeaulas.com.br",
-	target: "_blank"
+    target: "_blank",
   },
   {
     title: "AB Tester",
     path: "https://abtester.com.br",
-	target: "_blank"
-  },
-  {
-    title: "Propaganda em Revista",
-    path: "https://propagandasemrevistas.com.br",
-	target: "_blank"
-  },
-  {
-    title: "Desafio do Código",
-    path: "https://desafiodocodigo.com.br",
-	target: "_blank"
+    target: "_blank",
   },
   {
     title: "Contato",
     path: "/#contato",
-	target: ""
+    target: "",
   },
 ];
 
 const open = ref(false);
 
-
-const colorMode = useColorMode()
+const colorMode = useColorMode();
 const isDark = computed({
-  get () {
-    return colorMode.value === 'dark'
+  get() {
+    return colorMode.value === "dark";
   },
-  set () {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-  }
-})
-
-
+  set() {
+    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+  },
+});
 </script>
 
 <template>
@@ -59,8 +45,7 @@ const isDark = computed({
     <header class="flex flex-col lg:flex-row justify-between items-center my-5">
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold">Soraia</span
-          ><span class="">Novaes</span>
+          ><span class="font-bold">Soraia</span><span class="">Novaes</span>
         </a>
         <div class="block lg:hidden">
           <button @click="open = !open" class="">
@@ -95,28 +80,28 @@ const isDark = computed({
             <a
               :href="item.path"
               class="flex lg:px-3 py-2"
-			  :target="item.target"
-			  rel="noreferrer"
+              :target="item.target"
+              rel="noreferrer"
             >
-			
               {{ item.title }}
             </a>
           </li>
         </ul>
-       
       </nav>
-	  <ClientOnly>
-    <UButton
-      :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
-      color="gray"
-      variant="ghost"
-      aria-label="Theme"
-      @click="isDark = !isDark"
-    />
-    <template #fallback>
-      <div class="w-8 h-8" />
-    </template>
-  </ClientOnly>
+      <ClientOnly>
+        <UButton
+          :icon="
+            isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
+          "
+          color="gray"
+          variant="ghost"
+          aria-label="Theme"
+          @click="isDark = !isDark"
+        />
+        <template #fallback>
+          <div class="w-8 h-8" />
+        </template>
+      </ClientOnly>
     </header>
   </LandingContainer>
 </template>
