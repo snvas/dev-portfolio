@@ -3,6 +3,12 @@ import { ref, onMounted, watch } from "vue";
 
 const newTask = ref("");
 const tasks = ref([]);
+const isLoading = ref(true);
+
+onMounted(() => {
+  loadTasks();
+  isLoading.value = false; // Define como false após os dados serem carregados
+});
 
 // Load tasks of localStorage
 const loadTasks = () => {
@@ -30,11 +36,6 @@ const removeTask = (index) => {
   saveTasks(); // save tasks after remove
 };
 
-//load tasks on localStorage when mounted
-onMounted(() => {
-  loadTasks();
-});
-
 //Observe changes on tasks list and save
 /**Adds a watcher to observe changes to the task list and
  * automatically save to localStorage whenever there is a change.
@@ -48,10 +49,9 @@ watch(
   { deep: true }
 );
 </script>
-
 <template>
-  <h1 class="text-center text-3xl">To-Do List</h1>
-  <div class="todo-app">
+  <div class="todo-app" v-if="!isLoading">
+    <h1 class="text-center text-3xl">To-Do List</h1>
     <div class="task-input">
       <input
         v-model="newTask"
@@ -60,13 +60,15 @@ watch(
       />
       <button @click="addTask">Add To Do</button>
     </div>
-    <ul class="task-list">
+
+    <transition-group name="list" tag="ul" class="task-list">
       <li v-for="(task, index) in tasks" :key="index" class="task-item">
         {{ task }}
         <button @click="removeTask(index)" class="remove-button">Remove</button>
       </li>
-    </ul>
+    </transition-group>
   </div>
+  <div v-else class="loading">Loading...</div>
 </template>
 
 <style scoped>
@@ -122,7 +124,6 @@ button:hover {
   align-items: center;
   padding: 10px;
   margin: 8px 0;
-  background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -139,5 +140,21 @@ button:hover {
 
 .remove-button:hover {
   background-color: #c0392b;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: opacity 0.5s;
+}
+.list-enter, .list-leave-to /* .list-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
 }
 </style>
